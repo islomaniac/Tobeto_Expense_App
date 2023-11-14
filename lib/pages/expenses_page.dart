@@ -1,4 +1,5 @@
 import 'package:expenseapp/models/expense.dart';
+import 'package:expenseapp/widget/expense_item.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -66,7 +67,23 @@ class _ExpensesPageState extends State<ExpensesPage> {
       body: ListView.builder(
         itemCount: expenses.length,
         itemBuilder: (context, index) {
-          return Card(
+          return ExpenseItem(expenses[index]);
+        },
+      ),
+    );
+  }
+
+  // ignore: unused_element
+  String _getCurrentDateTime() {
+    DateTime now = DateTime.now();
+    return DateFormat('dd.MM.yyyy HH:mm').format(now);
+  }
+}
+
+
+
+
+/*Card(
             elevation: 10,
             color: Colors.white,
             child: ListTile(
@@ -76,14 +93,4 @@ class _ExpensesPageState extends State<ExpensesPage> {
               trailing: Text(_getCurrentDateTime()),
               leading: const Icon(Icons.shopify_outlined),
             ),
-          );
-        },
-      ),
-    );
-  }
-
-  String _getCurrentDateTime() {
-    DateTime now = DateTime.now();
-    return DateFormat('dd.MM.yyyy HH:mm').format(now);
-  }
-}
+          ); */
