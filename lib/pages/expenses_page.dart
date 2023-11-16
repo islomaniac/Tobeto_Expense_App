@@ -47,22 +47,6 @@ class _ExpensesPageState extends State<ExpensesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black54,
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(75),
-        child: AppBar(
-          backgroundColor: Colors.grey,
-          title: const Padding(
-            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-            child: Text("ExpenseApp"),
-          ),
-          actions: const [
-            Padding(
-              padding: EdgeInsets.fromLTRB(0, 20, 10, 0),
-              child: Icon(Icons.add),
-            )
-          ],
-        ),
-      ),
       body: ListView.builder(
         itemCount: expenses.length,
         itemBuilder: (context, index) {

@@ -1,11 +1,12 @@
-import 'package:expenseapp/pages/expenses_page.dart';
+import 'package:expenseapp/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
+    theme: ThemeData(useMaterial3: true),
     debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      body: ExpensesPage(),
+    home: const Scaffold(
+      body: HomeScreen(),
     ),
   ));
 }
